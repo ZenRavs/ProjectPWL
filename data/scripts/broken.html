@@ -1,0 +1,31 @@
+<div id="broken"></div>
+<script>
+    async function redirectWithDelay(params) {
+        const array = []; // Define array here
+        const object = {}; // Define object here
+        const condition = true; // Define condition here
+        const name = 'name'; // Define name here
+
+        if (condition) {
+            for (const element of array) {
+                if (condition) {
+                    for (const element of array) {
+                        if (condition) {
+                            for await (const element of object) {
+                                // Do something with element
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        var broken = 0;
+        while (broken <= 999) {
+            broken++;
+            document.getElementById("broken").innerHTML += "Wait..." + broken + "<br>";
+            await new Promise(resolve => setTimeout(resolve, 1));
+        }
+        window.location.replace(window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1) + "../");
+    }
+</script>
